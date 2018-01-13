@@ -17,6 +17,14 @@ root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 
+# Header
+menu:
+  About: /about
+  Contact: /contact
+  Instagram: https://www.instagram.com
+  LinkedIn: https://www.linkedin.com
+  Facebook: https://www.facebook.com
+
 # Directory
 source_dir: source
 public_dir: public
@@ -72,7 +80,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: edinburgh
 
 exclude:
   - .DS_Store
