@@ -21,9 +21,9 @@ permalink_defaults:
 menu:
   About: /about
   Contact: /contact
-  Instagram: https://www.instagram.com
-  LinkedIn: https://www.linkedin.com
-  Facebook: https://www.facebook.com
+  Instagram: https://www.instagram.com/lyraatlas
+  Facebook: https://www.facebook.com/lyraatlas
+  Twitter: https://www.twitter.com/lyraatlas
 
 # Directory
 source_dir: source
