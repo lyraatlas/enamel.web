@@ -911,14 +911,11 @@ nav .btn,
   height: 55px;
 }
 .logo {
-  max-height: 60%;
 }
 .logo-light {
   display: none;
 }
 nav.nav-centered .logo {
-  max-height: 64px;
-  margin: 64px 0 40px 0;
 }
 nav.bg-dark .logo-light {
   display: inline;
@@ -1323,8 +1320,6 @@ nav .cart-overview a {
     width: 100%;
   }
   nav.nav-centered .logo {
-    margin: 24px 0 16px 0;
-    max-height: 40px;
   }
   .menu {
     height: auto;
@@ -1470,6 +1465,9 @@ nav.scrolled {
   transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
+}
+nav.thinned {
+   /* height: 100px; */
 }
 nav.fixed,
 nav.absolute {

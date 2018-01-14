@@ -7,6 +7,7 @@ var mr_firstSectionHeight,
     mr_outOfSight = false,
     mr_floatingProjectSections,
     mr_scrollTop = 0;
+    mr_thinned = false;
 
 $(document).ready(function() { 
     "use strict";
@@ -109,14 +110,6 @@ $(document).ready(function() {
     if ($('nav').hasClass('bg-dark')) {
         $('.nav-container').addClass('bg-dark');
     }
-
-
-    // Fix nav to top while scrolling
-
-    mr_nav = $('body .nav-container nav:first');
-    mr_navOuterHeight = $('body .nav-container nav:first').outerHeight();
-        mr_fixedAt = typeof mr_nav.attr('data-fixed-at') !== typeof undefined ? parseInt(mr_nav.attr('data-fixed-at').replace('px', '')) : parseInt($('section:nth-of-type(1)').outerHeight());
-    window.addEventListener("scroll", updateNav, false);
 
     // Menu dropdown positioning
 
@@ -281,11 +274,10 @@ $(document).ready(function() {
       });
 
     // Instagram Feed
-    
     if($('.instafeed').length){
     	jQuery.fn.spectragram.accessData = {
-			accessToken: '1406933036.dc95b96.2ed56eddc62f41cbb22c1573d58625a2',
-			clientID: '87e6d2b8a0ef4c7ab8bc45e80ddd0c6a'
+			accessToken: '6765658534.db8210d.e4548aed246d43998da03867638afd08',
+			clientID: 'db8210d512d94719afa55925faa86d45'
 		};	
 
         $('.instafeed').each(function() {
@@ -1022,11 +1014,26 @@ $(window).load(function() {
 
 
 }); 
+
+// Fix nav to top while scrolling
+mr_nav = $('body .nav-container nav:first');
+mr_navOuterHeight = $('body .nav-container nav:first').outerHeight();
+mr_fixedAt = typeof mr_nav.attr('data-fixed-at') !== typeof undefined 
+    ? parseInt(mr_nav.attr('data-fixed-at').replace('px', '')) 
+    : parseInt($('section:nth-of-type(1)').outerHeight());
+
+mr_login = $('ul.menu li.hidden-lg');
+console.log(mr_login);
+
+var center_login_visible = false;
+
+window.addEventListener("scroll", updateNav, false);
+
 function updateNav() {
 
     var scrollY = mr_scrollTop;
 
-    if (scrollY <= 0) {
+    if (scrollY <= 100) {
         if (mr_navFixed) {
             mr_navFixed = false;
             mr_nav.removeClass('fixed');
@@ -1039,6 +1046,15 @@ function updateNav() {
             mr_navScrolled = false;
             mr_nav.removeClass('scrolled');
         }
+        if(mr_thinned){
+            mr_thinned = false;
+            mr_nav.removeClass('thinned');
+        }
+        if(center_login_visible){
+            $(mr_login[0]).addClass('hidden-lg');
+            $(mr_login[1]).addClass('hidden-lg');
+            center_login_visible = false;
+        }
         return;
     }
 
@@ -1048,13 +1064,30 @@ function updateNav() {
             mr_navScrolled = true;
             return;
         }
+        if(!mr_thinned){
+            mr_thinned = true;
+            mr_nav.addClass('thinned');
+        }
+        if(!center_login_visible){
+            $(mr_login[0]).removeClass('hidden-lg');
+            $(mr_login[1]).removeClass('hidden-lg');
+            center_login_visible = true;
+        }
     } else {
         if (scrollY > mr_navOuterHeight) {
            if (!mr_navFixed) {
                 mr_nav.addClass('fixed');
                 mr_navFixed = true;
             }
-
+            if(!mr_thinned){
+                mr_thinned = true;
+                mr_nav.addClass('thinned');
+            }
+            if(!center_login_visible){
+                $(mr_login[0]).removeClass('hidden-lg');
+                $(mr_login[1]).removeClass('hidden-lg');
+                center_login_visible = true;
+            }
             if (scrollY > mr_navOuterHeight +10) {
                 if (!mr_outOfSight) {
                     mr_nav.addClass('outOfSight');
