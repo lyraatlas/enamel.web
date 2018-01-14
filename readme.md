@@ -3,3 +3,4 @@
    
        <%= console.dir(config.menu) %>
 
+whenever you want to change something to gold use this color:   color: rgb(190, 150, 86);

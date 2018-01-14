@@ -5,20 +5,9 @@
 
   <body class="scroll-assist">
     <%- partial('_partial/navbar') %>
-  	<div class="container-fluid navbar-container m-sm-5">
-      <!-- Header -->
-      <%- partial('_partial/header') %>
-
-  		<div class="row">
-  			<%- body %>
-      </div>
-      <% if (page.total > 1) { %>
-    <nav class="page-nav">
-        <%- paginator({prev_text: '<', next_text: '>'}) %>
-    </nav>
-<% } %>
-  	</div>
-
+    <div class="row">
+      <%- body %>
+    </div>
     <!-- After footer scripts -->
     <%- partial('_partial/footer') %>
   </body>

@@ -956,6 +956,7 @@ nav.bg-dark .logo-dark {
   font-weight: 600;
   letter-spacing: 1px;
   color: #292929;
+  color: rgb(114, 114, 114)
   opacity: 0.5;
   transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;

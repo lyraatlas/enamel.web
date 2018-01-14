@@ -52,11 +52,24 @@
     <a id="top"></a>
     <nav class="nav-centered">
         <div class="text-center">
-            <a href="/">
-                <div style="font-family: Playfair Display; font-size: 24px;margin-top:20px; font-weight:100; font-style:normal;" >
-                    Lyra Atlas
+            <div class="container" style="margin:0px 0px 0px 0px;width:100%;padding: 0px; 0px; 0px; 0px;">
+                <div class="row">
+                    <div class="col-md-2">
+
+                    </div>
+                    <div class="col-md-8">
+                        <a href="/">
+                            <div style="font-family: Playfair Display; font-size: 50px;margin-top:64px; margin-bottom:40px; font-weight:100; font-style:normal;" >
+                                Lyra Atlas
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-2 hidden-xs hidden-sm hidden-md" style="margin-top:64px;">
+                        <a href="/login" style="border-right:1px solid lightgrey; margin-right:10px; padding-right:10px; padding-bottom:5px; color:rgb(114, 114, 114);" >Login</a>
+                        <a href="/signup" style="color:rgb(114, 114, 114)">Sign Up</a>
+                    <div>
                 </div>
-            </a>
+            </div>
         </div>
         <div class="nav-bar text-center">
             <div class="module widget-handle mobile-toggle right visible-sm visible-xs">
@@ -76,8 +89,18 @@
                             </a>
                         </li>
                         <li>
+                            <a href="/contact">
+                                Contact
+                            </a>
+                        </li>
+                        <li class="hidden-lg">
                             <a href="https://app.lyraatlas.com/login">
                                 Login
+                            </a>
+                        </li>
+                        <li class="hidden-lg">
+                            <a href="https://app.lyraatlas.com/signup">
+                                Sign Up
                             </a>
                         </li>
                         <li>
@@ -88,7 +111,7 @@
                     </ul>
                 </div>
                 <!--end of menu module-->
-                <div class="module widget-handle search-widget-handle left">
+                <div class="module widget-handle search-widget-handle">
                     <div class="search">
                         <i class="ti-search"></i>
                         <span class="title">Search Site</span>
@@ -103,64 +126,338 @@
             </div>
     </nav>
     </div>
-  	<div class="container-fluid navbar-container m-sm-5">
-      <!-- Header -->
-      <nav class="navbar navbar-toggleable-sm navbar-light px-1 py-3 my-3 mb-sm-5">
-  <a class="navbar-brand ml-2" href="/">Lyra Atlas | Bucket List | Travel</a>
-  <button class="navbar-toggler navbar-toggler-right py-2" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse text-center" id="navbarCollapse">
-    <ul class="navbar-nav ml-auto my-auto">
-      
-        <li class="nav-item">
-          <a class="nav-link" href="/about">About</a>
-        </li>
-      
-        <li class="nav-item">
-          <a class="nav-link" href="/contact">Contact</a>
-        </li>
-      
-        <li class="nav-item">
-          <a class="nav-link" href="https://www.instagram.com/lyraatlas">Instagram</a>
-        </li>
-      
-        <li class="nav-item">
-          <a class="nav-link" href="https://www.facebook.com/lyraatlas">Facebook</a>
-        </li>
-      
-        <li class="nav-item">
-          <a class="nav-link" href="https://www.twitter.com/lyraatlas">Twitter</a>
-        </li>
-      
-
-    </ul>
-    <hr class="hidden-md-up" />
-  </div>
-</nav>
-
-
-  		<div class="row">
-  			
-    <div class="col-md-6 col-12 mb-4">
-  <div class="hovereffect">
-    <a href="/2018/01/12/second-post/">
-      <img class="img-fluid portfolio-img" src="/2018/01/12/second-post/brianna-cover.jpg" alt="second-post">
-      <div class="overlay">
-        <span class="overlay-text">second-post</span>
-      </div>
-    </a>
-  </div>
+    <div class="row">
+      <div class="main-container">
+    <section class="image-slider slider-all-controls parallax controls-inside pt0 pb0">
+        <ul class="slides">
+            <li class="overlay image-bg pt240 pb240 pt-xs-120 pb-xs-120">
+                <div class="background-image-holder">
+                    <img alt="image" class="background-image" src="img/fashion1.jpg">
+                </div>
+                <div class="container">
+                    <div class="row text-center">
+                        <div class="col-md-12">
+                            <h2 class="mb40 uppercase">Bold, Vibrant, You.</h2>
+                            <a class="btn btn-lg" href="#">Explore Collection</a>
+                        </div>
+                    </div>
+                    <!--end of row-->
+                </div>
+                <!--end of container-->
+            </li>
+        </ul>
+    </section>
+    <section class="pt40 pb0">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <h6 class="uppercase mb0">Free shipping on all orders over £50 for the month of October</h6>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="pt40 pb0">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="image-tile inner-title title-center text-center">
+                        <a href="#">
+                            
+                            <img alt="Pic" src="img/fashion2.jpg" />
+                            <div class="title">
+                                <h4 class="uppercase mb0">Fall Lookbook</h4>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="image-tile inner-title title-center text-center">
+                        <img alt="Pic" src="img/fashion3.jpg" />
+                        <div class="title">
+                            <div class="modal-container">
+                                <div class="play-button btn-modal inline"></div>
+                                <div class="foundry_modal no-bg">
+                                    <iframe data-provider="vimeo" data-video-id="63344039" data-autoplay="1" allowfullscreen="allowfullscreen"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="pt40 pb0">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <h6 class="uppercase mb0">Recent Arrivals This Month</h6>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="pt40 pb0">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-4">
+                    <div class="image-tile outer-title text-center">
+                        <a href="#">
+                            <img alt="Pic" class="product-thumb" src="img/shop-product-1.jpg" />
+                        </a>
+                        <div class="title">
+                            <h5 class="mb0">Adrian
+                                <br /> LambsWool Cap</h5>
+                            <span class="display-block mb16">$49.95</span>
+                        </div>
+                    </div>
+                </div>
+                <!--end three col-->
+                <div class="col-md-3 col-sm-4">
+                    <div class="image-tile outer-title text-center">
+                        <a href="#">
+                            <img alt="Pic" class="product-thumb" src="img/shop-product-2.jpg" />
+                        </a>
+                        <div class="title">
+                            <h5 class="mb0">Stanley
+                                <br /> Leather Wallet</h5>
+                            <span class="display-block mb16">$69.95</span>
+                        </div>
+                    </div>
+                </div>
+                <!--end three col-->
+                <div class="col-md-3 col-sm-4">
+                    <div class="image-tile outer-title text-center">
+                        <a href="#">
+                            <img alt="Pic" class="product-thumb" src="img/shop-product-7.jpg" />
+                        </a>
+                        <div class="title">
+                            <h5 class="mb0">Vladimir
+                                <br />Stainless Flask</h5>
+                            <span class="display-block mb16">$49.95</span>
+                        </div>
+                    </div>
+                </div>
+                <!--end three col-->
+                <div class="col-md-3 col-sm-4">
+                    <div class="image-tile outer-title text-center">
+                        <a href="#">
+                            <img alt="Pic" class="product-thumb" src="img/shop-product-3.jpg" />
+                        </a>
+                        <div class="title">
+                            <h5 class="mb0">Luka
+                                <br />Vintage Camera</h5>
+                            <span class="display-block mb16">$259</span>
+                        </div>
+                    </div>
+                </div>
+                <!--end three col-->
+            </div>
+            <!--end of row-->
+        </div>
+        <!--end of container-->
+    </section>
+    <section class="pt40 pb0">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="image-tile inner-title title-center text-center">
+                        <a href="#">
+                            <img alt="Pic" src="img/fashion4.jpg" />
+                            <div class="title">
+                                <h4 class="uppercase mb0">Sustainability</h4>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="image-tile inner-title title-center text-center">
+                        <a href="#">
+                            <img alt="Pic" src="https://images.unsplash.com/photo-1439789246184-86fd68529829?q=80&fm=jpg&s=9b5281bedc9e4ce2e40216c99715f5e5"
+                            />
+                            <div class="title">
+                                <h4 class="uppercase mb0">#foundrylife</h4>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="pt40 pb40">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 overflow-hidden">
+                    <div class="col-sm-3 p0">
+                        <a href="#">
+                            <div class="bg-secondary pt96 pb96 text-center fade-on-hover">
+                                <i class="ti-shopping-cart-full icon icon-sm mb8"></i>
+                                <h6 class="uppercase mb0">Shop Range</h6>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-3 p0">
+                        <a href="#">
+                            <div class="bg-secondary pt96 pb96 text-center fade-on-hover">
+                                <i class="ti-package icon icon-sm mb8"></i>
+                                <h6 class="uppercase mb0">Shipping Info</h6>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-3 p0">
+                        <a href="#">
+                            <div class="bg-secondary pt96 pb96 text-center fade-on-hover">
+                                <i class="ti-help-alt icon icon-sm mb8"></i>
+                                <h6 class="uppercase mb0">FAQ</h6>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-3 p0">
+                        <a href="#">
+                            <div class="bg-secondary pt96 pb96 text-center fade-on-hover">
+                                <i class="ti-receipt icon icon-sm mb8"></i>
+                                <h6 class="uppercase mb0">Returns Policy</h6>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="pt40 pb40 bg-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 text-center pt8">
+                    <ul class="list-inline social-list">
+                        <li>
+                            <a href="#">
+                                <i class="ti-twitter-alt icon icon-sm"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="ti-facebook icon icon-sm"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="ti-dribbble icon icon-sm"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="ti-vimeo-alt icon icon-sm"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-6">
+                    <form class="form-newsletter halves" data-success="Thanks for your registration, we will be in touch shortly." data-error="Please fill all fields correctly.">
+                        <input type="text" name="email" class="mb0 validate-email validate-required  signup-email-field" placeholder="Email Address"
+                        />
+                        <button type="submit" class="mb0">Subscribe</button>
+                        <iframe srcdoc="<!-- Begin MailChimp Signup Form --><link href=&quot;https://cdn-images.mailchimp.com/embedcode/classic-081711.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;><style type=&quot;text/css&quot;> #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }   /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.     We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */</style><div id=&quot;mc_embed_signup&quot;><form action=&quot;//mrare.us8.list-manage.com/subscribe/post?u=77142ece814d3cff52058a51f&amp;id=94d040322a&quot; method=&quot;post&quot; id=&quot;mc-embedded-subscribe-form&quot; name=&quot;mc-embedded-subscribe-form&quot; class=&quot;validate&quot; target=&quot;_blank&quot; novalidate>    <div id=&quot;mc_embed_signup_scroll&quot;>   <h2>Subscribe to our mailing list</h2><div class=&quot;indicates-required&quot;><span class=&quot;asterisk&quot;>*</span> indicates required</div><div class=&quot;mc-field-group&quot;>    <label for=&quot;mce-EMAIL&quot;>Email Address  <span class=&quot;asterisk&quot;>*</span></label>   <input type=&quot;email&quot; value=&quot;&quot; name=&quot;EMAIL&quot; class=&quot;required email&quot; id=&quot;mce-EMAIL&quot;></div><div class=&quot;mc-field-group&quot;>  <label for=&quot;mce-FNAME&quot;>First Name </label>    <input type=&quot;text&quot; value=&quot;&quot; name=&quot;FNAME&quot; class=&quot;&quot; id=&quot;mce-FNAME&quot;></div><div class=&quot;mc-field-group&quot;> <label for=&quot;mce-LNAME&quot;>Last Name </label> <input type=&quot;text&quot; value=&quot;&quot; name=&quot;LNAME&quot; class=&quot;&quot; id=&quot;mce-LNAME&quot;></div>   <div id=&quot;mce-responses&quot; class=&quot;clear&quot;>      <div class=&quot;response&quot; id=&quot;mce-error-response&quot; style=&quot;display:none&quot;></div>     <div class=&quot;response&quot; id=&quot;mce-success-response&quot; style=&quot;display:none&quot;></div>   </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->    <div style=&quot;position: absolute; left: -5000px;&quot;><input type=&quot;text&quot; name=&quot;b_77142ece814d3cff52058a51f_94d040322a&quot; tabindex=&quot;-1&quot; value=&quot;&quot;></div>    <div class=&quot;clear&quot;><input type=&quot;submit&quot; value=&quot;Subscribe&quot; name=&quot;subscribe&quot; id=&quot;mc-embedded-subscribe&quot; class=&quot;button&quot;></div>    </div></form></div><script type='text/javascript' src='https://s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script><!--End mc_embed_signup-->"
+                            class="mail-list-form">
+                        </iframe>
+                    </form>
+                </div>
+            </div>
+            <!--end of row-->
+        </div>
+        <!--end of container-->
+    </section>
 </div>
-
-
-
-      </div>
-      
-  	</div>
-
+    </div>
     <!-- After footer scripts -->
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <footer class="footer-1 bg-secondary">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <img alt="Logo" class="logo" src="img/logo-dark.png" />
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="widget">
+                        <h6 class="title">Recent Posts</h6>
+                        <hr>
+                        <ul class="link-list recent-posts">
+                            <li>
+                                <a href="#">Hugging pugs is super trendy</a>
+                                <span class="date">February
+                                    <span class="number">14, 2015</span>
+                                </span>
+                            </li>
+                            <li>
+                                <a href="#">Spinning vinyl is oh so cool</a>
+                                <span class="date">February
+                                    <span class="number">9, 2015</span>
+                                </span>
+                            </li>
+                            <li>
+                                <a href="#">Superior theme design by pros</a>
+                                <span class="date">January
+                                    <span class="number">27, 2015</span>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--end of widget-->
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="widget">
+                        <h6 class="title">Latest Updates</h6>
+                        <hr>
+                        <div class="twitter-feed">
+                            <div class="tweets-feed" data-feed-name="mrareweb">
+                            </div>
+                        </div>
+                    </div>
+                    <!--end of widget-->
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="widget">
+                        <h6 class="title">Instagram</h6>
+                        <hr>
+                        <div class="instafeed" data-user-name="mrareweb">
+                            <ul></ul>
+                        </div>
+                    </div>
+                    <!--end of widget-->
+                </div>
+            </div>
+            <!--end of row-->
+            <div class="row">
+                <div class="col-sm-6">
+                    <span class="sub">&copy; Copyright 2016 - Medium Rare</span>
+                </div>
+                <div class="col-sm-6 text-right">
+                    <ul class="list-inline social-list">
+                        <li>
+                            <a href="#">
+                                <i class="ti-twitter-alt"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="ti-facebook"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="ti-dribbble"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="ti-vimeo-alt"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--end of container-->
+        <a class="btn btn-sm fade-half back-to-top inner-link" href="#top">Top</a>
+    </footer>
+
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 
