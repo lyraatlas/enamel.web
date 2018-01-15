@@ -109,4 +109,5 @@ deploy:
 #Plugins
 
 #Clean-css plugin
-clean_css:
+skip_render:
+  admin/config.yml
