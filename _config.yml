@@ -56,9 +56,25 @@ highlight:
 # per_page: Posts displayed per page. (0 = disable pagination)
 # order_by: Posts order. (Order by date descending by default)
 index_generator:
-  path: ''
-  per_page: 10
+  path: '/blog'
+  per_page: 5
   order_by: -date
+  layout: 'blog'
+archive_generator:
+  path: '/archive'
+  per_page: 5
+  order_by: -date
+  layout: 'blog'
+category_generator:
+  path: '/categories'
+  per_page: 5
+  order_by: -date
+  layout: 'blog'
+tag_generator:
+  path: '/tag'
+  per_page: 5
+  order_by: -date
+  layout: 'blog'
   
 # Category & Tag
 default_category: Travel

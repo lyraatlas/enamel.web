@@ -14,18 +14,7 @@
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6">
-                    <div class="widget">
-                        <h6 class="title">Recent Posts</h6>
-                        <hr>
-                        <ul class="link-list recent-posts">
-                            <% site.posts.sort('date', -1).limit(5).each(function(post){ %>
-                            <li>
-                                <a href="<%- url_for(post.path) %>"><%= post.title || '(no title)' %></a>
-                                <span class="date gold"><%= date(post.updated, site.date_format)  || '' %></span>
-                            </li>
-                            <% }) %>
-                        </ul>
-                    </div>
+                    <%- partial('_partial/recent-posts') %>
                     <!--end of widget-->
                 </div>
                 <div class="col-md-3 col-sm-6">
