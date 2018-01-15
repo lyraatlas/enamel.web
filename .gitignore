@@ -57,6 +57,7 @@ typings/
 # dotenv environment variables file
 .env
 
+# shouldn't be checking in our public folder.
 public/
 
 db.json

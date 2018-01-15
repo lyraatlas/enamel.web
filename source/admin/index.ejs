@@ -1,0 +1,48 @@
+---
+layout: false
+---
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Content Manager</title>
+
+  <!-- Include the styles for the Netlify CMS UI, after your own styles -->
+  <link rel="stylesheet" href="https://unpkg.com/netlify-cms@^1.0.0/dist/cms.css" />
+
+</head>
+<body>
+  <!-- Include the script that builds the page and powers Netlify CMS -->
+  <script src="https://unpkg.com/netlify-cms@^1.0.0/dist/cms.js"></script>
+  {% raw %}
+  <script type="application/x-yaml" id="cms-yaml-config">
+backend:
+  name: netlify-api
+  url: http://localhost:4000
+
+# Make sure to change this for production
+production:
+  backend:
+    name: github-api
+    branch: master
+
+media_folder: "source/images/uploads" # Folder where user uploaded files should go
+public_folder: "source"
+
+collections:
+  - name: "blog" # Used in routes, e.g., /admin/collections/blog
+    label: "Blog" # Used in the UI
+    folder: "_posts" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "cover_image", widget: "image"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  </script>
+  {% endraw %}
+</body>
+</html>
