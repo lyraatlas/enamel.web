@@ -15,31 +15,5 @@ layout: false
 <body>
   <!-- Include the script that builds the page and powers Netlify CMS -->
   <script src="https://unpkg.com/netlify-cms@^1.0.0/dist/cms.js"></script>
-  {% raw %}
-  <script type="application/x-yaml" id="cms-yaml-config">
-
-    # Make sure to change this for production
-    production:
-    backend:
-        name: github-api
-        branch: master
-
-    media_folder: "source/_posts/images/uploads" # Folder where user uploaded files should go
-    public_folder: "source"
-
-    collections:
-    - name: "blog" # Used in routes, e.g., /admin/collections/blog
-        label: "Blog" # Used in the UI
-        folder: "source/_posts" # The path to the folder where the documents are stored
-        create: true # Allow users to create new documents in this collection
-        slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-        fields: # The fields for each document, usually in front matter
-        - {label: "Layout", name: "layout", widget: "hidden", default: "'blog'"}
-        - {label: "Title", name: "title", widget: "string"}
-        - {label: "Publish Date", name: "date", widget: "datetime"}
-        - {label: "Featured Image", name: "cover_image", widget: "image"}
-        - {label: "Body", name: "body", widget: "markdown"}
-  </script>
-  {% endraw %}
 </body>
 </html>
