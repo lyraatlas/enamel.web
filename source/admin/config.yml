@@ -3,7 +3,7 @@ backend:
     branch: master
 
 media_folder: "source/images/uploads" # Folder where user uploaded files should go
-public_folder: "images/uploads"
+public_folder: ""
 
 collections:
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
@@ -12,7 +12,7 @@ collections:
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-    - {label: "Layout", name: "layout", widget: "hidden", default: "'blog'"}
+    - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
     - {label: "Title", name: "title", widget: "string"}
     - {label: "Publish Date", name: "date", widget: "datetime"}
     - {label: "Featured Image", name: "cover_image", widget: "image"}
