@@ -6,7 +6,7 @@ media_folder: "source/_posts/images/uploads" # Folder where user uploaded files 
 public_folder: "source"
 
 collections:
-- name: "blog" # Used in routes, e.g., /admin/collections/blog
+  - name: "blog" # Used in routes, e.g., /admin/collections/blog
     label: "Blog" # Used in the UI
     folder: "source/_posts" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
