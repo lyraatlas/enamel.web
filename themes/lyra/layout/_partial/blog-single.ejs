@@ -1,0 +1,52 @@
+
+<div class="main-container">
+            <section>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-9 mb-xs-24">
+                            <div class="post-snippet mb64">
+                                <div class="post-title">
+                                    <h4 class="inline-block"><%- item.title || theme.default_post_title || "Untitled" %></h4>
+                                    <br />
+                                    <div class="label date gold"><%= date(item.updated, site.date_format)  || '' %></div>
+                                </div>
+                                
+                                <img class="mb24" src="<%- config.root %><%- item.path %><%- item.cover_image || theme.default_cover_image %>" alt="<%- item.title || theme.default_post_title || "Untitled" %>">
+
+                                <ul class="post-meta">
+                                    <% if (item.tags && item.tags.data && item.tags.data.length){ %>
+                                        <% item.tags.data.forEach(function(tag){ %>
+                                            <li>
+                                                <i class="ti-tag"></i>
+                                                <span> <a href="/tags/<%= tag.name %>"><%= tag.name %></a> </span>
+                                            </li>
+                                        <% }) %>
+                                    <% } %>
+                                </ul>
+                                <hr>
+                                <%- item.content %>
+                            </div>
+                            <!--end of post snippet-->
+                        </div>
+                        <!--end of nine col-->
+                        <div class="col-md-3 hidden-sm">
+
+                            <%- partial('_partial/recent-posts') %>
+                            <!--end of widget-->
+                            <div class="widget">
+                                <h6 class="title">Latest Updates</h6>
+                                <hr>
+                                <div class="twitter-feed">
+                                    <div class="tweets-feed" data-feed-name="lyraatlas">
+                                    </div>
+                                </div>
+                            </div>
+                            <!--end of widget-->
+                        </div>
+                        <!--end of sidebar-->
+                    </div>
+                    <!--end of container row-->
+                </div>
+                <!--end of container-->
+            </section>
+        </div>

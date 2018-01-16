@@ -1016,11 +1016,11 @@ $(window).load(function() {
 }); 
 
 // Fix nav to top while scrolling
-mr_nav = $('body .nav-container nav:first');
-mr_navOuterHeight = $('body .nav-container nav:first').outerHeight();
+mr_nav = $('body .nav-container nav:first') || 0;
+mr_navOuterHeight = $('body .nav-container nav:first').outerHeight() || 0;
 mr_fixedAt = typeof mr_nav.attr('data-fixed-at') !== typeof undefined 
-    ? parseInt(mr_nav.attr('data-fixed-at').replace('px', '')) 
-    : parseInt($('section:nth-of-type(1)').outerHeight());
+    ? parseInt(mr_nav.attr('data-fixed-at').replace('px', '')) || 0
+    : parseInt($('section:nth-of-type(1)').outerHeight()) || 0;
 
 mr_login = $('ul.menu li.hidden-lg');
 console.log(mr_login);
