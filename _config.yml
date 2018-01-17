@@ -113,3 +113,11 @@ skip_render:
   admin/config.yml
 
 neat_enable: true
+
+imagemin:
+  enable     : true
+  interlaced : false
+  multipass  : false
+  optimizationLevel: 2
+  pngquant   : false
+  progressive: true
