@@ -111,3 +111,5 @@ deploy:
 #Clean-css plugin
 skip_render:
   admin/config.yml
+
+neat_enable: true
