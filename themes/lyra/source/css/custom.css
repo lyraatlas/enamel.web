@@ -29,3 +29,8 @@ div.pagination {
     color: #fff;
     border-color: #333347;
   }
+
+  .lyralogo{
+      max-height: 100px;
+      max-width: 400px;
+  }

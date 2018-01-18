@@ -1033,7 +1033,7 @@ function updateNav() {
 
     var scrollY = mr_scrollTop;
 
-    if (scrollY <= 100) {
+    if (scrollY <= 200) {
         if (mr_navFixed) {
             mr_navFixed = false;
             mr_nav.removeClass('fixed');
@@ -1055,13 +1055,15 @@ function updateNav() {
             $(mr_login[1]).addClass('hidden-lg');
             center_login_visible = false;
         }
-        return;
+        if (mr_outOfSight) {
+            mr_nav.removeClass('outOfSight');
+            mr_outOfSight = false;
+        }
     }
-
-    if (scrollY > mr_navOuterHeight + mr_fixedAt) {
+    else{
         if (!mr_navScrolled) {
-            mr_nav.addClass('scrolled');
             mr_navScrolled = true;
+            mr_nav.addClass('scrolled');
             return;
         }
         if(!mr_thinned){
@@ -1073,48 +1075,14 @@ function updateNav() {
             $(mr_login[1]).removeClass('hidden-lg');
             center_login_visible = true;
         }
-    } else {
-        if (scrollY > mr_navOuterHeight) {
-           if (!mr_navFixed) {
-                mr_nav.addClass('fixed');
-                mr_navFixed = true;
-            }
-            if(!mr_thinned){
-                mr_thinned = true;
-                mr_nav.addClass('thinned');
-            }
-            if(!center_login_visible){
-                $(mr_login[0]).removeClass('hidden-lg');
-                $(mr_login[1]).removeClass('hidden-lg');
-                center_login_visible = true;
-            }
-            if (scrollY > mr_navOuterHeight +10) {
-                if (!mr_outOfSight) {
-                    mr_nav.addClass('outOfSight');
-                    mr_outOfSight = true;
-                }
-            } else {
-                if (mr_outOfSight) {
-                    mr_outOfSight = false;
-                    mr_nav.removeClass('outOfSight');
-                }
-            }
-        } else {
-            if (mr_navFixed) {
-                mr_navFixed = false;
-                mr_nav.removeClass('fixed');
-            }
-            if (mr_outOfSight) {
-                mr_outOfSight = false;
-                mr_nav.removeClass('outOfSight');
-            }
+        if (!mr_navFixed) {
+            mr_nav.addClass('fixed');
+            mr_navFixed = true;
         }
-
-        if (mr_navScrolled) {
-            mr_navScrolled = false;
-            mr_nav.removeClass('scrolled');
+        if (!mr_outOfSight) {
+            mr_nav.addClass('outOfSight');
+            mr_outOfSight = true;
         }
-
     }
 }
 
